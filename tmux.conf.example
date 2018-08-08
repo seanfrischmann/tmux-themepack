@@ -1,0 +1,2 @@
+source-file "${HOME}/.tmux-themepack/powerline/block/orange.tmuxtheme"
+setw -g mode-keys vi
