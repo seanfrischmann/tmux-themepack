@@ -1,5 +1,14 @@
 source-file "${HOME}/.tmux-themepack/powerline/block/orange.tmuxtheme"
 setw -g mode-keys vi
-set -g mouse-select-pane on
-set -g mouse-resize-pane on
 set-window-option -g clock-mode-style 12
+
+# tmux version < 2.1
+#set -g mouse-select-pane on
+#set -g mouse-resize-pane on
+
+# tmux version > 2.1
+set -g mouse on
+bind '"' split-window -c "#{pane_current_path}"
+bind % split-window -h -c "#{pane_current_path}"
+bind c new-window -c "#{pane_current_path}"
+
